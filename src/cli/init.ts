@@ -26,16 +26,16 @@ export default async function(projectName: string) {
   // copy src, test file
 
   // const mainFrom = path.resolve();
-  fsEditor.copy(base.typescript, distPath);
+  fsEditor.copy(base.typescript, distPath, {
+    globOptions: {
+      dot: true
+    }
+  });
   fsEditor.commit(res => {
 
     console.log('enter project');
     shelljs.cd(projectName);
     // shelljs.exec(`cd ${projectName}`);
-    // install
-    console.log(shelljs.pwd());
-    console.log('npm install');
-    shelljs.exec('npm install');
   
     shelljs.exec('git init');
     // done

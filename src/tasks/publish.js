@@ -14,7 +14,7 @@ function publishGit() {
     ghPages({
       branch: config.target.branch,
       cacheDir: config.base.publishCache,
-      push: false,
+      push: true,
     }),
   );
 }

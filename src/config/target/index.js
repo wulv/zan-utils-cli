@@ -1,7 +1,7 @@
 const esConfig = require('./es');
 const cjsConfig = require('./cjs');
 
-const target = process.env.target || 'es';
+const target = process.env.target || 'commonjs';
 
 const targetConfigMap = {
   es: esConfig,

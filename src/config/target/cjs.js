@@ -1,6 +1,7 @@
 import path from 'path';
 const dtsExport = require('../plugins/dts-export');
-
+const addModuleExports = require('babel-plugin-add-module-exports');
+const presetEnv = require('@babel/preset-env');
 module.exports = {
   // build config
   tsconfig: {
@@ -27,12 +28,12 @@ module.exports = {
   },
   babel: {
     presets: [
-      ['@babel/env',{
+      [presetEnv,{
         modules: 'commonjs'
       }]
     ],
     plugins: [
-      ['add-module-exports', {
+      [addModuleExports, {
         addDefaultProperty: true
       }]
     ]

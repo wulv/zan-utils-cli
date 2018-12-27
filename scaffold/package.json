@@ -4,14 +4,13 @@
     "node": ">=8.11.0"
   },
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
-    "wulv-utils-cli": "^0.0.1"
+    "wulv-utils-cli": "^0.0.3"
   },
   "scripts": {
     "dev": "wulv-utils-cli dev",
     "build": "wulv-utils-cli build",
     "test": "wulv-utils-cli test",
-    "publish": "wulv-utils-cli eject"
+    "publish": "wulv-utils-cli publish"
   }
 }
