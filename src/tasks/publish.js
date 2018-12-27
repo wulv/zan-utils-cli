@@ -19,4 +19,11 @@ function publishGit() {
   );
 }
 
-gulp.task('publish', gulp.series('clean', 'build', 'typing', publishGit));
+function publishDoc() {
+  return gulp.src(config.base.distCwd + '/docs/**/*')
+  .pipe(ghPages({
+    cacheDir: '.docs',
+  }));
+}
+
+gulp.task('publish', gulp.series('clean', 'build', 'typing', 'doc', publishDoc, publishGit));
