@@ -14,6 +14,5 @@ gulp.on('error', e => console.log('error', e));
 
 export default function() {
 
-  const result = gulp.task('dev')((err) => {console.log(err)});
-  console.log('result', result);
+  gulp.task('dev')((err) => {console.log('dev done')});
 }
